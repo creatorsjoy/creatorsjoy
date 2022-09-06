@@ -109,7 +109,7 @@ nav li:hover:before, #nav_slide li:hover:before {
         height: 100vh;
         padding-top: 30px;
         width: 0;
-        transition: 0.75s ease-out;
+        transition: 0.25s ease-in-out;
         padding-right: 0;
         display: block;
     }

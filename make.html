@@ -14,10 +14,9 @@
             }
 
             #container {
-                max-width: 100%;
+                width: 100%;
                 height: 100%;
                 display: flex;
-                padding: 0 200px;
                 background-size: 100% 100%;
                 background-image: url("res/paper.png");
                 text-align: center;
@@ -25,8 +24,16 @@
 
             h1 {
                 margin: auto;
-                font-size: 80px;
+                font-size: 60px;
                 font-family: 'Pangolin', cursive;
+                padding: 0 20px;
+            }
+
+            @media only screen and (max-width: 520px) {
+                h1 {
+                    font-size: 55px;
+                    padding: 0 10px;
+                }
             }
         </style>
     </head>
