@@ -1,0 +1,257 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/content.css">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            #mission {
+                width: 100%;
+                height: 550px;
+                background-color: white;
+                font-family: Helvetica, sans-serif;
+                overflow: hidden;
+                position: relative;
+                padding-top: 80px;
+                z-index: 1;
+            }
+
+            #mission h1 {
+                font-size: 43px;
+                padding-top: 200px;
+                padding-left: 70px;
+                color: #231e33;
+                float: left;
+            }
+            
+            #volunteer {
+                width: 310px;
+                margin-left: 480px;
+                padding: 25px 0px;
+                font-size: 30px;
+                text-align: center;
+                background-image: linear-gradient(to right, #4ebcc2 , #5BD5CB);
+                color: white;
+                border-radius: 40px;
+                float: left;
+                transition: 0.25s ease-in-out;
+                z-index: 100;
+            }
+
+            #volunteer:hover, .learn_more:hover {
+                background-image: linear-gradient(to right, #3d8c91 , #439992);
+                color: black;
+            }
+
+            #card_pile {
+                height: 100%;
+                right: -350px;
+                top: 0;
+                position: absolute;
+                z-index: -1;
+            }
+
+            #summary {
+                width: 100%;
+                height: auto;
+                background-color: #e0fffc;
+                position: relative;
+                display: flow-root;
+            }
+
+            @media only screen and (max-width: 1370px) {
+                #card_pile {
+                    opacity: 0.6;
+                    z-index: -10;
+                } 
+
+                #mission_shadow {
+                    background-color: rgba(8, 28, 41, 0.67);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    z-index: -5;
+                }
+
+                #box_thing {
+                    width: 100%;
+                    height: 200px;
+                    background-color: white;
+                    position: absolute;
+                    top: 230px;
+                    z-index: -1;
+                }
+            }
+
+            @media only screen and (max-width: 920px) {
+                #volunteer {
+                    margin-top: 25px;
+                    margin-left: 40px;
+                }
+
+                #box_thing {
+                    height: 250px;
+                }
+
+                #box_thing, #mission h1 {
+                    margin-top: -50px;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                #box_thing, #mission h1 {
+                    margin-top: -110px;
+                }
+
+                #mission h1 {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+
+                #box_thing {
+                    height: 300px;
+                }
+            }
+
+            @media only screen and (max-width: 425px) {
+                #box_thing {
+                    height: 360px;
+                }
+
+                #box_thing, #mission h1 {
+                    margin-top: -160px;
+                }
+            }
+
+            @media only screen and (max-width: 390px) {
+                #box_thing {
+                    height: 400px;
+                }
+
+                #box_thing, #mission h1 {
+                    margin-top: -190px;
+                }
+
+                #mission h1 {
+                    font-size: 40px;
+                }
+
+                #volunteer {
+                    margin-left: 20px;
+                    font-size: 28px;
+                    width: 290px;
+                }
+            }
+
+            @media only screen and (max-width: 1110px) {
+                .text h2 {
+                    font-size: 45px;
+                }
+
+                .text p {
+                    font-size: 23px;
+                }
+            }
+
+            @media only screen and (max-width: 1030px) {
+                .content img {
+                    display: none;
+                }
+
+                .content {
+                    height: 350px;
+                    margin: 50px 15%;
+                }
+            }
+
+            @media only screen and (max-width: 540px) {
+                .text h2 {
+                    font-size: 40px;
+                }
+
+                .text p {
+                    font-size: 21px;
+                }
+
+                #learn_more {
+                    margin-top: 15px;
+                }
+            }
+
+            @media only screen and (max-width: 450px) {
+                .content {
+                    height: 400px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "shadow"></div>
+        <nav>
+            <a href = "creators-joy.html"><img id = "logo" src = "res/logo.png"/></a>
+            <button id = "open" onclick = "openNav()">&#9776;</button>
+            <button id = "close" onclick = "closeNav()">&times;</button>
+            <ul id = "nav">
+                <a href = "mission.html"><li>Our mission</li></a>
+                <a href = "team.html"><li>Our team</li></a>
+                <a href = "make.html"><li>Create a card</li></a>
+                <a href = "partner.html"><li>Partner with us</li></a>
+            </ul>
+        </nav>
+
+        <ul id = "nav_slide">
+            <a href = "mission.html"><li>Our mission</li></a>
+            <a href = "team.html"><li>Our team</li></a>
+            <a href = "make.html"><li>Create a card</li></a>
+            <a href = "partner.html"><li>Partner with us</li></a>
+        </ul>
+
+        <div id = "mission">
+            <div id = "box_thing"></div>
+            <h1>We're spreading joy through the ordinary,<br>one card at a time</h1>
+            <a href = "make.html"><div id = "volunteer">Volunteer with us</div></a>
+
+            <img id = "card_pile" src = "res/card_pile.png"/>
+            <div id = "mission_shadow"></div>
+        </div>
+
+        <div id = "summary">
+            <div class = "content">
+                    <div class = "text">
+                        <h2>Who we are</h2>
+                        <p>We're Creators' Joy: a non-profit organization on a mission to spread the joy of handmade cards to those in need, friends, family, and more. We run card making events for volunteers to join us in creating these wonderful cards for donation.</p>
+                    </div>
+                    <img src = "res/cards.png"/>
+            </div>
+
+            <div class = "content">
+                <div class = "text">
+                    <h2>Take action</h2>
+                    <p>Want to join us on our mission? Create a greeting card and donate it to us!<br><br><i>Volunteer hours are available upon request.</i></p>
+                    <a href = "mission.html"><div class = "learn_more">Learn more</div></a>
+                </div>
+                <img src = "res/cards.png"/>
+            </div>
+
+            <div class = "content">
+                <div class = "text">
+                    <h2>Partner with us</h2>
+                    <p>Want to receive cards from us? We're always looking for new partners! See if you are eligible for receiving donations, and find out more below.</p>
+                    <a href = "partner.html"><div class = "learn_more">Next steps</div></a>
+                </div>
+                <img src = "res/cards.png"/>
+            </div>
+        </div>
+
+        <div id = "footer">
+            <p>Copyright © 2022 Creators' Joy</p> 
+        </div>   
+        
+        <script src = "nav.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,52 @@
+.content {
+    width: 70%;
+    height: 500px;
+    background-color: white;
+    margin: 100px 15%;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    box-shadow: 10px 10px #b8fff0;
+}
+
+.text {
+    float: left;
+    margin: auto 5%;
+}
+
+.text h2 {
+    position: relative;
+    font-size: 50px;
+    color: #255f63;
+}
+
+.bottom_border {
+    width: 300px;
+    position: absolute;
+    border-bottom: solid 4px #4ebcc2;
+}
+
+.text p {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.content img {
+    float: right;
+    height: 84%;
+    margin: auto 0;
+    margin-right: 40px;
+}
+
+.learn_more {
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px 0px;
+    font-size: 26px;
+    text-align: center;
+    background-image: linear-gradient(to right, #4ebcc2 , #5BD5CB);
+    color: white;
+    border-radius: 40px;
+    float: left;
+    transition: 0.25s ease-in-out;
+}

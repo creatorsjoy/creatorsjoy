@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/content.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #container {
+                max-width: 100%;
+                height: 100%;
+                display: flex;
+                padding: 0 200px;
+                background-size: 100% 100%;
+                background-image: url("res/paper.png");
+                text-align: center;
+            }
+
+            h1 {
+                margin: auto;
+                font-size: 80px;
+                font-family: 'Pangolin', cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "shadow"></div>
+        <nav>
+            <a href = "creators-joy.html"><img id = "logo" src = "res/logo.png"/></a>
+            <button id = "open" onclick = "openNav()">&#9776;</button>
+            <button id = "close" onclick = "closeNav()">&times;</button>
+            <ul id = "nav">
+                <a href = "mission.html"><li>Our mission</li></a>
+                <a href = "team.html"><li>Our team</li></a>
+                <a href = "make.html"><li>Create a card</li></a>
+                <a href = "partner.html"><li>Partner with us</li></a>
+            </ul>
+        </nav>
+
+        <ul id = "nav_slide">
+            <a href = "mission.html"><li>Our mission</li></a>
+            <a href = "team.html"><li>Our team</li></a>
+            <a href = "make.html"><li>Create a card</li></a>
+            <a href = "partner.html"><li>Partner with us</li></a>
+        </ul>
+
+        <div id = "container">
+            <h1>There are currently no card-making events being held, check again later!</h1>
+        </div>
+
+        <div id = "footer">
+            <p>Copyright © 2022 Creators' Joy</p> 
+        </div>
+        
+        <script src = "nav.js"></script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #b8fff0;
+    z-index: 1;
+}
+
+nav ul, #nav_slide {
+    text-decoration: none;
+    list-style-type: none;
+    overflow: hidden;
+    right: 0;
+    padding-right: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+} 
+
+nav #logo {
+    width: 110px;
+    float: left;
+    padding-left: 20px;
+}
+
+nav li, #nav_slide li {
+    float: left;
+    margin: 30px 23px; 
+    display: block;
+    position: relative;
+    color: #2d2447;
+    transition: 0.25s ease-in-out;
+}
+
+nav li:before, #nav_slide li:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: auto;
+    bottom: -3;
+    background-image: linear-gradient(to right, #3d8c91 , #439992);
+    transition: 0.25s ease-in-out;
+}
+
+nav li:hover, #nav_slide li:hover {
+    color: #3d8c91;
+}
+
+nav li:hover:before, #nav_slide li:hover:before {
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #1f2727;
+    display: flex;
+}
+
+#footer p {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#open, #close {
+    display: none;
+    right: 0;
+    position: absolute;
+    z-index: 4;
+    margin: 20px 25px;
+    font-size: 25px;
+    border: none;
+    background: none;
+    color: #2d2447;
+    z-index: 5;
+}
+
+#nav_slide {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #shadow {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color:rgb(0, 0, 0);
+        opacity: 0;
+        transition: 0.25s ease-out;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #nav_slide {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #b8fff0;
+        z-index: 4;
+        height: 100vh;
+        padding-top: 30px;
+        width: 0;
+        transition: 0.75s ease-out;
+        padding-right: 0;
+        display: block;
+    }
+
+    #open {
+        display: block;
+    }
+}
+
+.stop_scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.scrollable_place {
+    height: auto;
+    overflow: auto;
+}

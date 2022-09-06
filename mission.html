@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/content.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #heading {
+                width: 100%;
+                height: auto;
+                background-size: auto 600px;
+                background-image: url("res/paper.png");
+                display: flex;
+                z-index: -1;
+                padding-top: 80px;
+                text-align: center;
+            }
+
+            #heading h1 {
+                margin: auto;
+                font-family: 'Pangolin', cursive;
+                color: #231e33;
+                padding: 0 25%;
+            }
+
+            #line {
+                margin:  auto;
+                width: 100px;
+                height: 5px;
+                background-color: #5BD5CB;
+            }
+
+            #strawberry {
+                position: absolute;
+                left: 15px;
+                width: 360px;
+                padding-top: 40px;
+            }
+
+            #tree {
+                position: absolute;
+                right: 0;
+                padding-top: 85px;
+                width: 350px;
+            }
+
+            #content {
+                background-color: #f0fffe;
+            }
+
+            #stats {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 15px 0;
+            }
+
+            #stats_header {
+                font-family: Helvetica, sans-serif;
+                text-align: center;
+                margin: 40px 30px 0 30px;
+            }
+
+            #stats_header h2{
+                padding-top: 50px;
+                font-size: 60px;
+            }
+
+            #stats_header h3 {
+                font-size: 40px;
+            }
+
+            .card {
+                margin: 30px;
+                height: 350px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: #e0fffc;
+                box-shadow: 10px 10px #5BD5CB;
+                color: #231d35;
+                font-family: Helvetica, sans-serif;
+            }
+
+            .card h2 {
+                font-size: 90px;
+            }
+
+            .card p {
+                font-size: 30px;
+            }
+
+            #steps {
+                width: 100%;
+                min-height: 610px;
+                padding: 10px 0;
+                font-family: Helvetica, sans-serif;
+                text-align: center;
+            }
+
+            #steps h2 {
+                font-size: 60px;
+                padding-top: 50px;
+            }
+
+            #step_things {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color: white;
+                box-shadow: 10px 10px #5BD5CB;
+                margin: 50px;
+                margin-top: 25px;
+                margin-bottom: 0;
+            }
+
+            .thing {
+                min-height: 360px;
+                margin: 30px;
+            }
+
+            .thing img {
+                height: 190px;
+                padding: 30px;
+                padding-top: 5px;
+                padding-bottom: 15px;
+            }
+
+            .thing h3 {
+                font-size: 35px;
+            }
+
+            .thing p {
+                padding: 10px 50px;
+                font-size: 20px;
+            }
+
+            #partners {
+                font-family: Helvetica, sans-serif;
+                text-align: center;
+                margin: 60px;
+                margin-top: 20px;
+                background-color: white;
+            }
+            
+            #partners h2 {
+                padding-top: 50px;
+                font-size: 60px;
+                width: 100%;
+            }
+
+            #partner_list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            #partner_list img {
+                height: 300px;
+                margin: auto;
+            }
+
+            @media only screen and (max-width: 1300px) {
+                #heading img {
+                    display: none;
+                }
+            }
+
+            @media only screen and (max-width: 590px) {
+                #stats {
+                    display: block;
+                    grid-template-columns: none;
+                }
+
+                #heading h1 {
+                    padding: 0 10%;
+                }
+            }
+
+            @media only screen and (max-width: 1030px) {
+                #step_things {
+                    display: block;
+                }
+                #step_things img {
+                    padding-top: 30px;
+                }
+
+                #partner_list {
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "shadow"></div>
+        <nav>
+            <a href = "creators-joy.html"><img id = "logo" src = "res/logo.png"/></a>
+            <button id = "open" onclick = "openNav()">&#9776;</button>
+            <button id = "close" onclick = "closeNav()">&times;</button>
+            <ul id = "nav">
+                <a href = "mission.html"><li>Our mission</li></a>
+                <a href = "team.html"><li>Our team</li></a>
+                <a href = "make.html"><li>Create a card</li></a>
+                <a href = "partner.html"><li>Partner with us</li></a>
+            </ul>
+        </nav>
+
+        <ul id = "nav_slide">
+            <a href = "mission.html"><li>Our mission</li></a>
+            <a href = "team.html"><li>Our team</li></a>
+            <a href = "make.html"><li>Create a card</li></a>
+            <a href = "partner.html"><li>Partner with us</li></a>
+        </ul>
+
+        <div id = "heading">
+            <h1>Founded in 2016, we are a student-run, <mark style="background-color:#ffffe0;">nonprofit</mark> organization striving to spread joy through unique <mark style="background-color:#e0fffc;">handmade</mark> arts & crafts. From local shelters to community centres and hospitals, we hope to spread joy, one card at a time.</h1>
+            <img id = "strawberry" src = "res/strawberry.png"/>
+            <img id = "tree" src = "res/tree.png"/>
+        </div>
+
+        <div id = "content">
+            <div id = "stats_header">
+                <h2>Our Impact</h2>
+                <h3>2021-2022</h3>
+            </div>
+            <div id = "stats">
+                <div class = "card">
+                    <div>
+                        <h2>299</h2>
+                        <p>cards made from 2021 - 2022</p>
+                    </div>
+                </div>
+                <div class = "card">
+                    <div>
+                        <h2>130+</h2>
+                        <p>volunteer hours allocated</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "steps">
+                <h2>The Journey</h2>
+                <div id = "step_things">
+                    <div class = "thing">
+                        <img src = "res/partner.png"/>
+                        <h3>Partner</h3>
+                        <p>Whether as a partnering organization or sponsor, we'd love to have the chance to work together.</p>
+                    </div>
+                    <div class = "thing">
+                        <img src = "res/write.png"/>
+                        <h3>Volunteer</h3>
+                        <p>Want to help us spread joy in our community? Attend our events to make cards and earn volunteer hours.</p>
+                    </div>
+                    <div class = "thing">
+                        <img src = "res/send.png"/>
+                        <h3>Spread</h3>
+                        <p>We get to work on sending the cards over to our partners as soon as an event is over.</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div id = "partners">
+            <h2>Past Partners</h2>
+            <div id = "partner_list">
+                <img src = "res/partners/519.jpg"/>
+                <img src = "res/partners/5k.jpg"/>
+                <img src = "res/partners/alpha.jpg"/>
+                <img src = "res/partners/group.jpg"/>
+                <img src = "res/partners/inn.jpg"/>
+                <img src = "res/partners/mc.jpg"/>
+                <img src = "res/partners/pride.jpg"/>
+                <img src = "res/partners/royal.jpg"/>
+                <img src = "res/partners/second_harvest.jpg"/>
+                <img src = "res/partners/sickkids.jpg"/>
+                <img src = "res/partners/sjmf.jpg"/>
+                <img src = "res/partners/ysm.jpg"/>
+            </div>
+        </div>
+
+        <div id = "footer">
+            <p>Copyright © 2022 Creators' Joy</p> 
+        </div>
+        
+        <script src = "nav.js"></script>
+    </body>
+</html>
